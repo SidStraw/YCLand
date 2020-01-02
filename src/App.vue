@@ -3,7 +3,7 @@
     <Drawer :drawer="drawer" @drawerToggle="status => (drawer = status)" />
     <Navbar :fullWidth="fullWidth" @drawerToggle="drawer = true" />
     <Carousel style="margin-top: 66px" />
-    <div class="content white w-100">
+    <div class="app-content white w-100">
       <router-view />
     </div>
   </v-app>
@@ -42,10 +42,15 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-.content {
+<style lang="scss">
+.app-content {
   top: 100vh;
   position: relative;
   z-index: 4;
 }
+// @media screen and (max-width: 600px) {
+//   body {
+//     font-size: 12px;
+//   }
+// }
 </style>
