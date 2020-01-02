@@ -1,18 +1,18 @@
 <template>
-  <v-container>
-    1111
+  <div>
+    <About />
     <p style="height: 400vh">Hello</p>
-  </v-container>
+  </div>
 </template>
 
 <script>
-// import Carousel from "@/components/Carousel";
+import About from "@/views/About";
 
 export default {
   name: "Home",
 
   components: {
-    // Carousel
+    About
   }
 };
 </script>

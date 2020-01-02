@@ -16,7 +16,7 @@ export default new Vuex.Store({
     ],
     scrollOption: {
       duration: 700,
-      offset: 5,
+      offset: 0,
       easing: "linear"
     },
     fullHeight: 0,
