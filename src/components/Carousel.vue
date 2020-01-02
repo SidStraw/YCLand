@@ -4,7 +4,7 @@
     :height="$store.state.fullHeight - 66"
     hide-delimiter-background
     show-arrows-on-hover
-    :continuous="false"
+    :continuous="true"
     class="carousel"
     id="home"
   >

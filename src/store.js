@@ -8,7 +8,7 @@ export default new Vuex.Store({
     menu: [
       { name: "首頁", id: "home", next: null },
       { name: "服務項目", id: "about", next: null },
-      { name: "專業團隊", id: "service", next: null },
+      { name: "專業團隊", id: "team", next: null },
       { name: "最新消息", id: "news", next: null },
       { name: "特定工廠簡介", id: "regulations", next: null },
       { name: "常見問答", id: "qna", next: null },
@@ -16,7 +16,7 @@ export default new Vuex.Store({
     ],
     scrollOption: {
       duration: 700,
-      offset: 0,
+      offset: 5,
       easing: "linear"
     },
     fullHeight: 0,

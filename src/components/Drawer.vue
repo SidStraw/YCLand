@@ -10,7 +10,7 @@
       <v-list-item
         v-for="item in $store.state.menu"
         :key="item.id"
-        @click="$vuetify.goTo('#home', $store.state.scrollOption)"
+        @click="$vuetify.goTo(`#${item.id}`, $store.state.scrollOption)"
       >
         <!-- <v-list-item-action>
           <v-icon>home</v-icon>

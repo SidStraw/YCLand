@@ -15,7 +15,7 @@
             :ripple="false"
             v-for="item in $store.state.menu"
             :key="item.id"
-            @click="$vuetify.goTo('#home', $store.state.scrollOption)"
+            @click="$vuetify.goTo(`#${item.id}`, $store.state.scrollOption)"
             >{{ item.name }}</v-btn
           >
         </v-layout>
