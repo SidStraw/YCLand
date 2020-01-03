@@ -4,17 +4,26 @@
     <v-container>
       <v-layout mx-auto align-center>
         <!-- <div class="navbar"> -->
-        <v-toolbar-title>佑埕開發顧問</v-toolbar-title>
+        <v-toolbar-title class="d-flex align-center">
+          <img
+            src="@/assets/logo_02.png"
+            alt=""
+            class="w-100"
+            style="width: 200px"
+          />
+          <!-- 佑埕開發顧問 -->
+        </v-toolbar-title>
 
         <v-spacer></v-spacer>
 
-        <v-layout justify-end v-if="fullWidth >= 1100">
+        <v-layout menu justify-end v-if="fullWidth >= 1100">
           <v-btn
             append
             text
             :ripple="false"
             v-for="item in $store.state.menu"
             :key="item.id"
+            :class="linkActive(item.id)"
             @click="$vuetify.goTo(`#${item.id}`, $store.state.scrollOption)"
             >{{ item.name }}</v-btn
           >
@@ -37,6 +46,11 @@ export default {
   name: "Nav",
   props: {
     fullWidth: Number
+  },
+  methods: {
+    linkActive(linkId) {
+      return this.$store.state.activeLink === linkId ? "active" : "";
+    }
   }
 };
 </script>
@@ -57,5 +71,8 @@ export default {
 }
 .theme--light.v-btn:hover::before {
   opacity: 0;
+}
+.menu .active {
+  color: #95c85a
 }
 </style>

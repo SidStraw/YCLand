@@ -6,10 +6,11 @@
     app
     right
   >
-    <v-list dense class="text-center">
+    <v-list dense class="menu text-center" id="drawer_menu">
       <v-list-item
         v-for="item in $store.state.menu"
         :key="item.id"
+        :class="linkActive(item.id)"
         @click="$vuetify.goTo(`#${item.id}`, $store.state.scrollOption)"
       >
         <!-- <v-list-item-action>
@@ -28,6 +29,17 @@ export default {
   name: "Drawer",
   props: {
     drawer: Boolean
+  },
+  methods: {
+    linkActive(linkId) {
+      return this.$store.state.activeLink === linkId ? "active" : "";
+    }
   }
 };
 </script>
+
+<style lang="scss" scoped>
+#drawer_menu .active {
+  color: #95c85a !important;
+}
+</style>

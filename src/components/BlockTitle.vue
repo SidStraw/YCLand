@@ -5,14 +5,15 @@
         :class="[
           $vuetify.breakpoint.xsOnly ? 'display-1' : 'display-2',
           'font-weight-bold',
-          'text-center'
+          'text-center',
+          'mt-5'
         ]"
         style="color: #424242"
       >
         {{ title }}
       </h2>
     </v-flex>
-    <v-flex>
+    <v-flex hide-line>
       <div
         class="fusion-fullwidth fullwidth-box hundred-percent-fullwidth non-hundred-percent-height-scrolling"
         style="background-color: #ffffff;background-position: center center;background-repeat: no-repeat;padding-top:0px;padding-right:30px;padding-bottom:0px;padding-left:30px;"
@@ -79,5 +80,10 @@ export default {
 <style lang="scss" scoped>
 .bg-primary {
   background-color: #95c85a;
+}
+.hide-line {
+  position: relative;
+  top: -3px;
+  z-index: -1;
 }
 </style>

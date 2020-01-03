@@ -6,14 +6,15 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     menu: [
-      { name: "首頁", id: "home", next: null },
-      { name: "服務項目", id: "about", next: null },
-      { name: "專業團隊", id: "team", next: null },
-      { name: "最新消息", id: "news", next: null },
-      { name: "特定工廠簡介", id: "regulations", next: null },
-      { name: "常見問答", id: "qna", next: null },
-      { name: "聯絡我們", id: "contact", next: null }
+      { name: "首頁", id: "home", next: null, active: true },
+      { name: "服務項目", id: "about", next: null, active: false  },
+      { name: "專業團隊", id: "team", next: null, active: false  },
+      { name: "最新消息", id: "news", next: null, active: false  },
+      { name: "特定工廠簡介", id: "regulations", next: null, active: false  },
+      { name: "常見問答", id: "qna", next: null, active: false  },
+      { name: "聯絡我們", id: "contact", next: null, active: false  }
     ],
+    bolckOffsetTop: [],
     scrollOption: {
       duration: 700,
       offset: 0,
@@ -24,7 +25,7 @@ export default new Vuex.Store({
   },
 
   mutations: {
-    setState(state, targetState, value) {
+    setState(state, { targetState, value }) {
       state[targetState] = value;
     },
     setFullHeight(state, height) {
