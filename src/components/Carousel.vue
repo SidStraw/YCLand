@@ -31,39 +31,41 @@
           text-center
           :style="{ backgroundColor: `rgba(0,0,0,0.15)` }"
         >
-          <p
-            :class="[
-              $vuetify.breakpoint.xsOnly ? 'body-1' : 'display-1',
-              'ma-1'
-            ]"
-          >
-            王銘山建築師主持
-          </p>
-          <p
-            :class="[
-              $vuetify.breakpoint.xsOnly ? 'body-1' : 'display-1',
-              'ma-1'
-            ]"
-          >
-            佑埕開發顧問有限公司
-          </p>
-          <p
-            :class="[
-              $vuetify.breakpoint.xsOnly ? 'body-1' : 'display-1',
-              'ma-1'
-            ]"
-          >
-            宇城建築師事務所團隊
-          </p>
           <h2
             :class="[
               $vuetify.breakpoint.xsOnly ? 'display-1' : 'display-2',
               'font-weight-bold',
-              'mt-9'
+              'mt-3'
+            ]"
+          >
+            王銘山建築師主持
+          </h2>
+          <h2
+            :class="[
+              $vuetify.breakpoint.xsOnly ? 'display-1' : 'display-2',
+              'font-weight-bold',
+              'mt-3'
+            ]"
+          >
+            佑埕開發顧問有限公司
+          </h2>
+          <h2
+            :class="[
+              $vuetify.breakpoint.xsOnly ? 'display-1' : 'display-2',
+              'font-weight-bold',
+              'mt-3'
+            ]"
+          >
+            宇城建築師事務所團隊
+          </h2>
+          <p
+            :class="[
+              $vuetify.breakpoint.xsOnly ? 'body-1' : 'display-1',
+              'ma-9'
             ]"
           >
             專辦特定工廠登記證 輔導農地工廠合法
-          </h2>
+          </p>
         </v-layout>
       </v-layout>
     </v-carousel-item>
@@ -92,15 +94,14 @@
           >
             您衝事業 我做後盾
           </h2>
-          <h2
+          <p
             :class="[
-              $vuetify.breakpoint.xsOnly ? 'display-1' : 'display-2',
-              'font-weight-bold',
-              'mt-9'
+              $vuetify.breakpoint.xsOnly ? 'body-1' : 'display-1',
+              'ma-9'
             ]"
           >
             專業顧問讓您無後顧之憂
-          </h2>
+          </p>
         </v-layout>
       </v-layout>
     </v-carousel-item>
@@ -120,22 +121,6 @@
           text-center
           :style="{ backgroundColor: `rgba(0,0,0,0.15)` }"
         >
-          <p
-            :class="[
-              $vuetify.breakpoint.xsOnly ? 'body-1' : 'display-1',
-              'ma-1'
-            ]"
-          >
-            整合土地、測量、建築、環保、水利、水保、消防及營建
-          </p>
-          <p
-            :class="[
-              $vuetify.breakpoint.xsOnly ? 'body-1' : 'display-1',
-              'ma-1'
-            ]"
-          >
-            專辦【用地變更】的首選團隊
-          </p>
           <h2
             :class="[
               $vuetify.breakpoint.xsOnly ? 'display-1' : 'display-2',
@@ -143,8 +128,25 @@
               'mt-9'
             ]"
           >
-            跨界整合、業界第一
+            整合土地、測量、建築、環保、水利、水保、消防及營建
           </h2>
+          <h2
+            :class="[
+              $vuetify.breakpoint.xsOnly ? 'display-1' : 'display-2',
+              'font-weight-bold',
+              'mt-3'
+            ]"
+          >
+            專辦【用地變更】的首選團隊
+          </h2>
+          <p
+            :class="[
+              $vuetify.breakpoint.xsOnly ? 'body-1' : 'display-1',
+              'ma-9'
+            ]"
+          >
+            跨界整合、業界第一
+          </p>
         </v-layout>
       </v-layout>
     </v-carousel-item>
@@ -164,15 +166,60 @@
           text-center
           :style="{ backgroundColor: `rgba(0,0,0,0.15)` }"
         >
-          <p
+          <h2
             :class="[
-              $vuetify.breakpoint.xsOnly ? 'body-1' : 'display-1',
-              'ma-1'
+              $vuetify.breakpoint.xsOnly ? 'display-1' : 'display-2',
+              'font-weight-bold',
+              'mt-1'
             ]"
           >
             農地工廠納管
-          </p>
+          </h2>
+          <h2
+            :class="[
+              $vuetify.breakpoint.xsOnly ? 'display-1' : 'display-2',
+              'font-weight-bold',
+              'mt-1'
+            ]"
+          >
+            ↓
+          </h2>
+          <h2
+            :class="[
+              $vuetify.breakpoint.xsOnly ? 'display-1' : 'display-2',
+              'font-weight-bold',
+              'mt-1'
+            ]"
+          >
+            就地輔導
+          </h2>
+          <h2
+            :class="[
+              $vuetify.breakpoint.xsOnly ? 'display-1' : 'display-2',
+              'font-weight-bold',
+              'mt-1'
+            ]"
+          >
+            ↓
+          </h2>
+          <h2
+            :class="[
+              $vuetify.breakpoint.xsOnly ? 'display-1' : 'display-2',
+              'font-weight-bold',
+              'mt-1'
+            ]"
+          >
+            合法經營
+          </h2>
           <p
+            :class="[
+              $vuetify.breakpoint.xsOnly ? 'body-1' : 'display-1',
+              'mt-9'
+            ]"
+          >
+            步驟簡化、一站式服務
+          </p>
+          <!-- <p
             :class="[
               $vuetify.breakpoint.xsOnly ? 'body-1' : 'display-1',
               'ma-1'
@@ -196,7 +243,7 @@
             ]"
           >
             步驟簡化、一站式服務
-          </h2>
+          </h2> -->
         </v-layout>
       </v-layout>
     </v-carousel-item>
