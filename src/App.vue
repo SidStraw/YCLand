@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app id="v_app">
     <Drawer :drawer="drawer" @drawerToggle="status => (drawer = status)" />
     <Navbar :fullWidth="fullWidth" @drawerToggle="drawer = true" />
     <Carousel style="margin-top: 66px" />
@@ -83,12 +83,16 @@ export default {
         }
       }); //計算目前位置是第幾個連結的目標
     });
-    this.$store.dispatch("getData")
+    this.$store.dispatch("getData");
   }
 };
 </script>
 
 <style lang="scss">
+#v_app {
+  font-family: "Roboto", Arial, Helvetica, "Microsoft JhengHei", "微軟正黑體",
+    sans-serif;
+}
 .app-content {
   top: 100vh;
   position: relative;

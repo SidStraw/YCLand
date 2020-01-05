@@ -9,7 +9,11 @@
             src="@/assets/logo_02.png"
             alt=""
             class="w-100"
-            style="width: 200px"
+            :style="
+              $vuetify.breakpoint.mdOnly || $vuetify.breakpoint.xsOnly
+                ? { width: '220px' }
+                : { width: '270px' }
+            "
           />
           <!-- 佑埕開發顧問 -->
         </v-toolbar-title>
@@ -73,6 +77,6 @@ export default {
   opacity: 0;
 }
 .menu .active {
-  color: #95c85a
+  color: #95c85a;
 }
 </style>
