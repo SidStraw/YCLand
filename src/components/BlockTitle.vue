@@ -12,6 +12,18 @@
       >
         {{ title }}
       </h2>
+      <h3
+        v-if="subTitle"
+        :class="[
+          $vuetify.breakpoint.xsOnly ? 'headline' : 'display-1',
+          'font-weight-medium',
+          'text-center',
+          'mt-1'
+        ]"
+        style="color: #424242"
+      >
+        {{ subTitle }}
+      </h3>
     </v-flex>
     <v-flex hide-line>
       <div
@@ -72,7 +84,8 @@
 export default {
   name: "BlockTitle",
   props: {
-    title: String
+    title: String,
+    subTitle: String
   }
 };
 </script>

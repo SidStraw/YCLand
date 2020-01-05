@@ -1,6 +1,6 @@
 <template>
   <div id="regulations">
-    <BlockTitle title="特定工廠簡介" />
+    <BlockTitle title="特定工廠簡介" subTitle="納管、改善、合法經營" />
     <v-container>
       <v-layout v-for="item in $store.state.DOCData" :key="item.Title" column>
         <h3 class="text-center headline font-weight-medium mb-5">
@@ -8,7 +8,7 @@
         </h3>
         <!-- {{item.img}} -->
         <div v-for="img in item.img" :key="img.img" class="text-center px-9">
-          <img class="w-100" :src="img.img" />
+          <img style="max-width: 100%" :src="img.img" />
         </div>
       </v-layout>
     </v-container>
