@@ -47,14 +47,17 @@ export default new Vuex.Store({
   actions: {
     async getQA({ commit }) {
       let QAData = await axios.get(API.QA);
+      QAData.data.shift();
       commit("setState", { targetState: "QAData", value: QAData.data });
     },
     async getLINK({ commit }) {
       let LINKData = await axios.get(API.LINK);
+      LINKData.data.shift();
       commit("setState", { targetState: "LINKData", value: LINKData.data });
     },
     async getDOC({ commit }) {
       let DOCData = await axios.get(API.DOC);
+      DOCData.data.shift();
       commit("setState", { targetState: "DOCData", value: DOCData.data });
     },
     async getData({ dispatch }) {

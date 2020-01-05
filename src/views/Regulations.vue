@@ -1,14 +1,15 @@
 <template>
   <div id="regulations">
-    <BlockTitle title="專業團隊" />
+    <BlockTitle title="特定工廠簡介" />
     <v-container>
-      <v-layout
-        v-for="(item, index) in team"
-        :key="item.title"
-        :class="index % 2 ? '' : 'grey lighten-3'"
-      >
-        <div style="flex: 0 0 10rem" class="text-center">{{ item.title }}</div>
-        <v-flex v-html="item.value"></v-flex>
+      <v-layout v-for="item in $store.state.DOCData" :key="item.Title" column>
+        <h3 class="text-center headline font-weight-medium mb-5">
+          {{ item.Title }}
+        </h3>
+        <!-- {{item.img}} -->
+        <div v-for="img in item.img" :key="img.img" class="text-center px-9">
+          <img class="w-100" :src="img.img" />
+        </div>
       </v-layout>
     </v-container>
   </div>

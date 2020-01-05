@@ -3,7 +3,7 @@
     <BlockTitle title="服務項目" />
     <v-container mb-9 pb-md-9>
       <v-layout flex-wrap align-center>
-        <v-flex ma-5 logo-img>
+        <v-flex ma-9 pa-9 logo-img>
           <img src="@/assets/logo_02.png" alt="" class="w-100" />
         </v-flex>
         <v-flex logo-img px-sm-9 px-md-0>
