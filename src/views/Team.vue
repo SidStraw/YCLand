@@ -11,7 +11,7 @@
         :key="item.title"
         :class="index % 2 ? '' : 'grey lighten-3'"
       >
-        <div style="flex: 0 0 10rem" class="d-flex align-center justify-center">
+        <div style="flex: 0 0 7rem" class="d-flex align-center justify-center">
           {{ item.title }}
         </div>
         <v-flex table-value py-5 v-html="item.value"></v-flex>
