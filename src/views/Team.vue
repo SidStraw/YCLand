@@ -2,13 +2,19 @@
   <div id="team">
     <BlockTitle title="專業團隊" />
     <v-container>
+      <h2 class="text-center display-1">專業服務團隊</h2>
+      <h3 class="text-center headline mb-5">
+        由王銘山建築師領導專業特定工廠服務團隊
+      </h3>
       <v-layout
         v-for="(item, index) in team"
         :key="item.title"
         :class="index % 2 ? '' : 'grey lighten-3'"
       >
-        <div style="flex: 0 0 10rem" class="text-center">{{ item.title }}</div>
-        <v-flex v-html="item.value"></v-flex>
+        <div style="flex: 0 0 10rem" class="d-flex align-center justify-center">
+          {{ item.title }}
+        </div>
+        <v-flex table-value py-5 v-html="item.value"></v-flex>
       </v-layout>
     </v-container>
   </div>
@@ -62,5 +68,8 @@ export default {
 <style lang="scss" scoped>
 .logo-img {
   flex: 1 1 300px;
+}
+.table-value {
+  line-height: 2rem;
 }
 </style>
