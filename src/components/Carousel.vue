@@ -29,7 +29,7 @@
           align-center
           white--text
           text-center
-          :style="{ backgroundColor: `rgba(0,0,0,0.3)` }"
+          :style="{ backgroundColor: `rgba(0,0,0,0.15)` }"
         >
           <p
             :class="[
@@ -81,7 +81,7 @@
           align-center
           white--text
           text-center
-          :style="{ backgroundColor: `rgba(0,0,0,0.3)` }"
+          :style="{ backgroundColor: `rgba(0,0,0,0.15)` }"
         >
           <h2
             :class="[
@@ -118,7 +118,7 @@
           align-center
           white--text
           text-center
-          :style="{ backgroundColor: `rgba(0,0,0,0.3)` }"
+          :style="{ backgroundColor: `rgba(0,0,0,0.15)` }"
         >
           <p
             :class="[
@@ -162,7 +162,7 @@
           align-center
           white--text
           text-center
-          :style="{ backgroundColor: `rgba(0,0,0,0.3)` }"
+          :style="{ backgroundColor: `rgba(0,0,0,0.15)` }"
         >
           <p
             :class="[
