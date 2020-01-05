@@ -83,6 +83,7 @@ export default {
         }
       }); //計算目前位置是第幾個連結的目標
     });
+    this.$store.dispatch("getData")
   }
 };
 </script>
