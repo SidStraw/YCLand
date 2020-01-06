@@ -64,6 +64,10 @@ export default {
       });
     };
     window.addEventListener("scroll", () => {
+      this.$store.commit("setState", {
+        targetState: "activbolckOffsetTopeLink",
+        value: this.getBolckOffsetTop()
+      });
       const [
         ...activbolckOffsetTopeLink
       ] = this.$store.state.activbolckOffsetTopeLink;
