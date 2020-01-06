@@ -18,8 +18,8 @@ export default new Vuex.Store({
       { name: "首頁", id: "home", next: null },
       { name: "服務項目", id: "about", next: null },
       { name: "專業團隊", id: "team", next: null },
-      { name: "最新消息", id: "news", next: null },
       { name: "特定工廠簡介", id: "regulations", next: null },
+      { name: "最新消息", id: "news", next: null },
       { name: "常見問答", id: "qna", next: null },
       { name: "聯絡我們", id: "contact", next: null }
     ],

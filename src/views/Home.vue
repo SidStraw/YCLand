@@ -2,8 +2,8 @@
   <div>
     <About />
     <Team />
-    <News />
     <Regulations />
+    <News />
     <QnA />
     <Contact />
     <Fpooter />

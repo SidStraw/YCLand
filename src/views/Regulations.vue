@@ -27,6 +27,13 @@ export default {
     BlockTitle
   },
 
+  updated() {
+    this.$store.commit("setState", {
+      targetState: "activbolckOffsetTopeLink",
+      value: this.getBolckOffsetTop()
+    });
+  },
+
   data: () => ({
     team: [
       {
@@ -58,7 +65,26 @@ export default {
         value: `(1)中部科學工業園區管理中心專案管理暨新建統包工程<br>(2)中部科學工業園區建築執照審查及都市設計審議<br>(3)龜山島入口意象暨景觀工程計畫<br>(5)日月潭國家風景區車埕木業博物館新建工程<br>(6)日月潭國家風景區水社遊客服務中心興建工程<br>(7)台中市大坑風景區六號步道整建工程<br>(8)台中市旱溪自行車道一、二、三期規劃設計、監造<br>(9)台中市大墩路店舖、辦公室新建工程<br>(10)台中市潭子區住宅新建工程<br>(11)台中市北區太平路店舖、辦公室、住宅新建工程<br>(12)台中市西區大全街住宅新建工程<br>(13)中部科學工業園區豐聯資訊辦公室-室內裝修規劃設計、施工<br>(14)中部科學工業園區寶麗明廠房-室內裝修規劃設計、施工<br>(15)中部科學工業園區大青節能科技廠房-室內裝修規劃設計、施工<br>(16)台中市西屯區青海南街視聽歌唱場所新建工程<br>(17)台中市西屯區享溫馨KTV台中店新建工程<br>(18)台中市西屯區安和路住宅新建工程<br>(19)台中市豐原區豐社段店舖、住宅新建工程<br>(20)台中市西屯區西苑二街住宅新建工程`
       }
     ]
-  })
+  }),
+  methods: {
+    getBolckOffsetTop() {
+      return this.$store.state.menu
+        .map((item, index) => {
+          if (index === 0)
+            return {
+              id: item.id,
+              offsetTop: 0
+            };
+          return {
+            id: item.id,
+            offsetTop:
+              document.querySelector(`#${item.id}`).offsetTop +
+              this.$store.state.fullHeight * 0.75
+          };
+        })
+        .reverse();
+    }
+  }
 };
 </script>
 
