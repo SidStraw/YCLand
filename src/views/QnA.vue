@@ -6,7 +6,7 @@
         <!-- <v-flex text-center>
           <img src="@/assets/bk2-2.jpg" style="max-width: 100%" />
         </v-flex> -->
-        <v-flex>
+        <v-flex over-flow-hidden>
           <v-list>
             <v-list-group
               no-action
@@ -19,7 +19,10 @@
               <template v-slot:activator>
                 <v-list-item-title>{{ item.data[1] }}</v-list-item-title>
               </template>
-              <p class="black--text pa-9">{{ item.data[2] }}</p>
+              <p
+                class="black--text pa-9"
+                v-html="item.data[2].replace(/\r\n|\n/g, '<br>')"
+              ></p>
               <!-- <v-list-item link>
               <v-list-item-content></v-list-item-content>
             </v-list-item> -->
@@ -48,5 +51,15 @@ export default {
 <style lang="scss" scoped>
 .logo-img {
   flex: 1 1 300px;
+}
+.over-flow-hidden {
+  overflow: hidden;
+}
+.v-list-group {
+  .v-list-group__header {
+    .v-list-item__title {
+      white-space: normal;
+    }
+  }
 }
 </style>
