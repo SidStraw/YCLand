@@ -1,10 +1,13 @@
 <template>
   <div id="news">
-    <BlockTitle title="最新消息" />
+    <BlockTitle
+      title="最新消息"
+      subTitle="工廠管理輔導法&特定工廠資訊一手掌握"
+    />
     <v-container>
-      <h3 class="text-center headline font-weight-medium mb-5">
+      <!-- <h3 class="text-center headline font-weight-medium mb-5">
         工廠管理輔導法&特定工廠資訊一手掌握
-      </h3>
+      </h3> -->
       <!-- <v-layout> -->
       <div v-for="item in $store.state.LINKData" :key="item.index">
         <a target="_blank" :href="item.data[1]" class="news-link">

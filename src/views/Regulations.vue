@@ -3,7 +3,9 @@
     <BlockTitle title="特定工廠簡介" subTitle="納管、改善、合法經營" />
     <v-container>
       <v-layout v-for="item in $store.state.DOCData" :key="item.Title" column>
-        <h3 class="text-center headline font-weight-medium mb-5">
+        <h3
+          class="text-center headline font-weight-bold my-5 pa-5 light-green lighten-4"
+        >
           {{ item.Title }}
         </h3>
         <!-- {{item.img}} -->
