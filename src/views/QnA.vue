@@ -17,11 +17,11 @@
               :key="i"
             >
               <template v-slot:activator>
-                <v-list-item-title>{{ item.data[1] }}</v-list-item-title>
+                <v-list-item-title>{{ item.data[0] }}</v-list-item-title>
               </template>
               <p
                 class="black--text pa-9"
-                v-html="item.data[2].replace(/\r\n|\n/g, '<br>')"
+                v-html="item.data[1].replace(/\r\n|\n/g, '<br>')"
               ></p>
               <!-- <v-list-item link>
               <v-list-item-content></v-list-item-content>
